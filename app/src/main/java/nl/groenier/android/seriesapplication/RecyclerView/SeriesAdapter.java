@@ -1,18 +1,19 @@
-package nl.groenier.android.seriesapplication;
+package nl.groenier.android.seriesapplication.RecyclerView;
 
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.w3c.dom.Text;
-
 import java.util.List;
+
+import nl.groenier.android.seriesapplication.R;
+import nl.groenier.android.seriesapplication.Series;
+import nl.groenier.android.seriesapplication.SeriesDetailActivity;
 
 /**
  * Created by Martijn on 27/09/2016.

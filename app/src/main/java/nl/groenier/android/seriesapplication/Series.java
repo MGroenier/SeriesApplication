@@ -9,6 +9,10 @@ public class Series {
     private long id;
     private String title;
 
+    public Series() {
+
+    }
+
     public Series(long id, String title) {
         this.id = id;
         this.title = title;

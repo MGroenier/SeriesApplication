@@ -1,4 +1,4 @@
-package nl.groenier.android.seriesapplication;
+package nl.groenier.android.seriesapplication.SQLite;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
@@ -12,12 +12,12 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
 
     // Database info
     private static final String DATABASE_NAME = "series_application.db";
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 3;
 
     // Courses
-    public static final String TABLE_SERIES = "courses";
-    public static final String COLUMN_SERIES_ID = "course_id";
-    public static final String COLUMN_SERIES = "course";
+    public static final String TABLE_SERIES = "series";
+    public static final String COLUMN_SERIES_ID = "series_id";
+    public static final String COLUMN_SERIES = "series";
 
     // Creating the table
     private static final String DATABASE_CREATE_SERIES =
@@ -41,10 +41,10 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         // When the database gets upgraded you should handle the update to make sure there is no data loss.
         // This is the default code you put in the upgrade method, to delete the table and call the oncreate again.
-        if(oldVersion == 1) {
+        //if(oldVersion == 1) {
             db.execSQL("DROP TABLE IF EXISTS " + TABLE_SERIES);
             onCreate(db);
-        }
+        //}
     }
 
 }
